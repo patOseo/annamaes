@@ -1,3 +1,7 @@
+body.blog, body.search {
+	padding-top: 6rem;
+}
+
 .title-bar {
 	position: fixed;
 	top: 0;
