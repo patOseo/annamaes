@@ -107,8 +107,6 @@ class Iframe
                 'data-no-lazy=',
                 'recaptcha/api/fallback',
                 'loading="eager"',
-                'loading="lazy"',
-                'loading="auto"',
             ]
         );
     }
@@ -132,6 +130,10 @@ class Iframe
 
         $placeholder_atts = str_replace($iframe['src'], $placeholder, $iframe['atts']);
         $iframe_lazyload  = str_replace($iframe['atts'], $placeholder_atts . ' data-rocket-lazyload="fitvidscompatible" data-lazy-src="' . esc_url($iframe['src']) . '"', $iframe[0]);
+
+        if (! preg_match('@\sloading\s*=\s*(\'|")(?:lazy|auto)\1@i', $iframe_lazyload)) {
+            $iframe_lazyload = str_replace('<iframe', '<iframe loading="lazy"', $iframe_lazyload);
+        }
 
         /**
          * Filter the LazyLoad HTML output on iframes
@@ -162,6 +164,8 @@ class Iframe
 
         $query = wp_parse_url(htmlspecialchars_decode($iframe['src']), PHP_URL_QUERY);
 
+        $youtube_url = $this->changeYoutubeUrlForYoutuDotBe( $iframe['src'] );
+        $youtube_url = $this->cleanYoutubeUrl( $iframe['src'] );
         /**
          * Filter the LazyLoad HTML output on Youtube iframes
          *
@@ -169,7 +173,7 @@ class Iframe
          *
          * @param array $html Output that will be printed.
          */
-        $youtube_lazyload  = apply_filters('rocket_lazyload_youtube_html', '<div class="rll-youtube-player" data-id="' . esc_attr($youtube_id) . '" data-query="' . esc_attr($query) . '"></div>');
+        $youtube_lazyload  = apply_filters('rocket_lazyload_youtube_html', '<div class="rll-youtube-player" data-src="' . esc_attr( $youtube_url ) . '" data-id="' . esc_attr($youtube_id) . '" data-query="' . esc_attr($query) . '"></div>');
         $youtube_lazyload .= '<noscript>' . $iframe[0] . '</noscript>';
 
         return $youtube_lazyload;
@@ -196,5 +200,37 @@ class Iframe
         }
 
         return $matches[1];
+    }
+
+    /**
+     * Changes URL youtu.be/ID to youtube.com/embed/ID
+     *
+     * @param  string $url URL to replace.
+     * @return string      Unchanged URL or modified URL.
+     */
+    public function changeYoutubeUrlForYoutuDotBe( $url ) {
+        $pattern = '#^(?:https?:)?(?://)?(?:www\.)?(?:youtu\.be)/(?:embed/|v/|watch/?\?v=)?([\w-]{11})#iU';
+        $result  = preg_match( $pattern, $url, $matches );
+
+        if ( ! $result ) {
+            return $url;
+        }
+
+        return 'https://www.youtube.com/embed/' . $matches[1];
+    }
+
+    /**
+     * Cleans Youtube URL. Keeps only scheme, host and path.
+     *
+     * @param  string $url URL to be cleaned.
+     * @return string      Cleaned URL
+     */
+    public function cleanYoutubeUrl ( $url ) {
+        $parsed_url = wp_parse_url( $url, -1 );
+        $scheme     = isset( $parsed_url['scheme'] ) ? $parsed_url['scheme'] . '://' : '';
+        $host       = isset( $parsed_url['host'] ) ? $parsed_url['host'] : '';
+        $path       = isset( $parsed_url['path'] ) ? $parsed_url['path'] : '';
+
+        return $scheme . $host . $path;
     }
 }
