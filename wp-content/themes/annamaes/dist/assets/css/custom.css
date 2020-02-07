@@ -2,6 +2,14 @@ body.blog, body.search {
 	padding-top: 6rem;
 }
 
+body.blog .hentry {
+    margin: 2rem 0;
+    padding: 2rem 1rem;
+    background: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 2px 2px 9px -5px #9c9c9c;
+}
+
 .title-bar {
 	position: fixed;
 	top: 0;
