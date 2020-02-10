@@ -3,3 +3,5 @@ robots.txt
 wp-config.php
 wp-content/themes/annamaes-old
 wp-content/themes/annamaes-old2
+wp-content/uploads
+wp-content/cache

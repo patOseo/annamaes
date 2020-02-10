@@ -27,6 +27,9 @@ if(get_field('header')): ?>
 					<?php get_template_part( 'template-parts/content', 'page' ); ?>
 				<?php endwhile; ?>
 				<?php if($post->post_parent=='128' || is_page(12)): ?>
+					<?php if(is_page(12)): ?>
+						<?php if(get_field('group_meals_menu', 'option')): ?><div class="centered"><a class="button large" href="<?php the_field('group_meals_menu', 'option'); ?>" target="_blank">Download the Menu</a></div><?php endif; ?>
+					<?php endif; ?>
 					<?php get_template_part('template-parts/menus'); ?>
 				<?php endif; ?>
 				<?php if(is_page(16)): ?>

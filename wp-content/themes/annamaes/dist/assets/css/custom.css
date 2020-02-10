@@ -10,6 +10,10 @@ body.blog .hentry {
     box-shadow: 2px 2px 9px -5px #9c9c9c;
 }
 
+.centered {
+	text-align: center;
+}
+
 .title-bar {
 	position: fixed;
 	top: 0;

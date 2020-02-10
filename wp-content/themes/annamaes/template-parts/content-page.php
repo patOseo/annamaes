@@ -11,6 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
+		<?php if(is_page_child(128) && !is_page(142) && !is_page(146)): ?>
+			<?php if(get_field('restaurant_menu', 'option')): ?><div class="centered"><a class="button large" href="<?php the_field('restaurant_menu', 'option'); ?>" target="_blank">Download the Menu</a></div><?php endif; ?>
+		<?php endif; ?>
 		<?php the_content(); ?>
 		<?php $images = get_field('images'); $size = 'full'; $thumb = 'thumbnail'; ?>
 
