@@ -1,0 +1,22 @@
+.block-home-slider {
+    .home-slider-content {
+        z-index: 2;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.85);
+    }
+    .swiper-slide {
+        min-height: 90vh;
+    }
+
+    .award-logo {
+        z-index: 2;
+
+        img {
+            width: auto;
+            max-height: 60px;
+
+            @include media-breakpoint-up(xl) {
+                max-height: 160px;
+            }
+        }
+    }
+}

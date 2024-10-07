@@ -1,0 +1,15 @@
+.hblock {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+
+    strong {
+        padding: 0 20px;
+        color: #fefefe;
+        background-color: $black;
+        font-weight: 400;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 5rem;
+    }
+}

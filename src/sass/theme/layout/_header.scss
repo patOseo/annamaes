@@ -1,0 +1,30 @@
+#wrapper-navbar {
+    @include media-breakpoint-down(md) {
+        position: sticky;
+        top: 0;
+    }
+
+   z-index: 3;
+}
+
+
+#main-menu {
+    @include media-breakpoint-up(xl) {
+        .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .main-logo {
+        img {
+            max-width: 200px;
+        }
+    }
+}

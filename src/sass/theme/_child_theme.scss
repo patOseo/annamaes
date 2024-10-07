@@ -1,0 +1,28 @@
+// Basics
+@import "basics/fonts";
+@import "basics/typography";
+
+// Layout
+@import "layout/body";
+@import "layout/header";
+@import "layout/page-hero";
+@import "layout/footer";
+
+// Components
+@import "components/hblock";
+@import "components/buttons";
+@import "components/gallery";
+@import "components/notification-bar";
+
+// Blocks
+@import "blocks/home-slider";
+@import "blocks/page-header";
+@import "blocks/menus";
+
+// Templates
+@import "templates/blog";
+
+// Swiper
+@import '../../../node_modules/swiper/swiper';
+@import '../../../node_modules/swiper/modules/effect-fade';
+@import '../../../node_modules/swiper/modules/pagination';

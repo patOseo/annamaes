@@ -1,0 +1,12 @@
+{
+    "name": "acf/menus",
+    "title": "Menus",
+    "description": "A custom block to display menus.",
+    "category": "annamaes-blocks",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["menu", "menus"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "block-menus.php"
+    }
+}

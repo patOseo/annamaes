@@ -1,0 +1,12 @@
+{
+    "name": "acf/page-header",
+    "title": "Page Header",
+    "description": "A custom block to display a page header.",
+    "category": "annamaes-blocks",
+    "icon": "align-full-width",
+    "keywords": ["header"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "block-page-header.php"
+    }
+}

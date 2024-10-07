@@ -1,0 +1,12 @@
+{
+    "name": "acf/pdf-menu",
+    "title": "PDF Menu",
+    "description": "A custom block to download a PDF menu.",
+    "category": "annamaes-blocks",
+    "icon": "pdf",
+    "keywords": ["menu", "pdf", "button"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "block-pdf-menu.php"
+    }
+}

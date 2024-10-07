@@ -1,0 +1,100 @@
+{
+    "key": "group_5e416a1012df2",
+    "title": "Menu Links",
+    "fields": [
+        {
+            "key": "field_5e416a19a8aff",
+            "label": "Restaurant Menu",
+            "name": "restaurant_menu",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Upload the PDF for the Restaurant menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf, jpg"
+        },
+        {
+            "key": "field_5e416a35a8b00",
+            "label": "Group Meals Menu",
+            "name": "group_meals_menu",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Upload the PDF for the Group Meals menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf, jpg"
+        },
+        {
+            "key": "field_6203df314f67d",
+            "label": "Children's Menu",
+            "name": "childrens_menu",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1727901077
+}

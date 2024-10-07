@@ -1,0 +1,12 @@
+{
+    "name": "acf/home-slider",
+    "title": "Home Slider",
+    "description": "A custom block to display the home slider.",
+    "category": "annamaes-blocks",
+    "icon": "slides",
+    "keywords": ["slider", "home"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "block-home-slider.php"
+    }
+}

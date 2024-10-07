@@ -1,0 +1,7 @@
+.btn {
+    &.btn-primary {
+        &:hover {
+            background-color: shade-color($primary, 10%) !important;
+        }
+    }
+}
