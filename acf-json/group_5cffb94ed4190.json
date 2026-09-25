@@ -3,6 +3,32 @@
     "title": "Footer Options",
     "fields": [
         {
+            "key": "field_6ab68e3ff497a",
+            "label": "Footer Logo",
+            "name": "footer_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
             "key": "field_5cffb96b08719",
             "label": "Footer Details",
             "name": "footer_details",
@@ -48,7 +74,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": ""
+                "value": "footer-options"
             }
         ]
     ],
@@ -61,5 +87,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727901050
+    "modified": 1790348961
 }

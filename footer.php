@@ -22,7 +22,11 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="footer-grid text-center px-3">
         	<div class="col">
         		<div class="footer-info">
-        			<p><img src="/wp-content/themes/annamaes/images/annamaes-footer.jpg" alt="Anna Mae's"></p>
+					<?php if( get_field('footer_logo', 'option') ): ?>
+        			<p class="mb-4">
+						<?php echo wp_get_attachment_image(get_field('footer_logo', 'option'), 'full'); ?>
+					</p>
+					<?php endif; ?>
         			<p><?php echo get_field('footer_details', 'option'); ?></p>
         		</div>
         	</div>
